@@ -124,6 +124,7 @@ details .det-body{padding:0 18px 16px;font-size:14.5px}
 footer{background:var(--dark);color:#c9cfc6;padding:44px 0 54px;font-size:14px}
 footer .f-title{font-family:"Newsreader","Noto Serif SC",serif;color:#f2eee3;font-size:19px;font-weight:800}
 footer p{margin-top:10px;max-width:760px}
+footer .gc-line{margin-top:16px;font-size:13px;color:#9fb3ad}
 </style>
 </head>
 <body data-lang="en">
@@ -471,6 +472,7 @@ footer p{margin-top:10px;max-width:760px}
     <p class="en">In one line: waves are the foundation, and phase factors drive every layer of emergence — fermions emerge as spacetime crystallizes.</p>
     <p class="zh">一句话版本：波是根基，相位因子驱动每一层涌现——时空结晶涌现费米子。</p>
     <p><span class="en">Contact:</span><span class="zh">联系：</span> <a href="mailto:yan415822@gmail.com" style="color:#5eead4">yan415822@gmail.com</a></p>
+    <p class="gc-line">Visitors · 访问量：<span id="gc-count"></span></p>
   </div>
 </footer>
 
@@ -506,5 +508,19 @@ footer p{margin-top:10px;max-width:760px}
 })();
 </script>
 <script data-goatcounter="https://tpcg.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script>
+(function(){
+  var tries=0;
+  var iv=setInterval(function(){
+    tries++;
+    if(window.goatcounter && typeof window.goatcounter.visit_count==='function'){
+      clearInterval(iv);
+      window.goatcounter.visit_count({append:'#gc-count'});
+    } else if(tries>=100){
+      clearInterval(iv);
+    }
+  },100);
+})();
+</script>
 </body>
 </html>
