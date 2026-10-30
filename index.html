@@ -36,13 +36,13 @@ body[data-lang="zh"]{font-family:"IBM Plex Sans","Noto Sans SC",system-ui,sans-s
 
 /* header */
 .topbar{position:sticky;top:0;z-index:50;background:color-mix(in srgb, var(--bg) 88%, transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.topbar-in{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0}
+.topbar-in{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 12px;padding:10px 0}
 .brand{font-family:"Newsreader","Noto Serif SC",serif;font-weight:800;font-size:17px;letter-spacing:.02em;white-space:nowrap}
 .brand small{font-family:"IBM Plex Sans",sans-serif;font-weight:500;color:var(--muted);font-size:11px;margin-left:8px;letter-spacing:.08em;text-transform:uppercase}
-.nav{display:none;gap:18px;font-size:13.5px}
+.nav{display:flex;flex-wrap:wrap;gap:14px;font-size:13.5px;order:3;width:100%}
 .nav a{color:var(--ink);text-decoration:none}
 .nav a:hover{color:var(--teal)}
-@media(min-width:820px){.nav{display:flex}}
+@media(min-width:820px){.nav{gap:18px;order:0;width:auto}}
 .lang-switch{display:flex;background:var(--bg2);border:1px solid var(--line);border-radius:999px;padding:3px;gap:2px;flex-shrink:0}
 .lang-switch button{border:0;background:transparent;color:var(--muted);font:inherit;font-size:13px;font-weight:600;padding:6px 12px;border-radius:999px;cursor:pointer}
 .lang-switch button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
