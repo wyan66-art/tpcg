@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:,">
+<title>TPCG Progress · 三相进展</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,700;6..72,800&family=Noto+Serif+SC:wght@600;700;900&family=Noto+Sans+SC:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f8f7f3;--bg2:#ffffff;--ink:#161a1f;--muted:#5d6771;--line:#ddd8cc;--teal:#0f766e;--teal-soft:#e6f2f0;--amber:#a16207;--amber-soft:#fbf0d3;--radius:14px}
+@media (prefers-color-scheme: dark){:root{--bg:#0d1116;--bg2:#151b22;--ink:#ece8dd;--muted:#a7b0ba;--line:#2a323c;--teal:#2dd4bf;--teal-soft:#12302c;--amber:#eab308;--amber-soft:#332a0e}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"IBM Plex Sans","Noto Sans SC",system-ui,sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}
+body[data-lang="en"] .zh{display:none !important}
+body[data-lang="zh"] .en{display:none !important}
+h1,h2,h3,p,ul,ol{margin:0}
+a{color:var(--teal)}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+.serif{font-family:"Newsreader","Noto Serif SC",serif}
+.topbar{position:sticky;top:0;z-index:50;background:var(--bg);border-bottom:1px solid var(--line)}
+.topbar-in{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0}
+.brand{font-family:"Newsreader","Noto Serif SC",serif;font-weight:800;font-size:17px;white-space:nowrap}
+.brand small{font-weight:500;color:var(--muted);font-size:11px;margin-left:8px;letter-spacing:.08em;text-transform:uppercase}
+.nav{display:none;gap:18px;font-size:13.5px}
+.nav a{color:var(--ink);text-decoration:none}
+.nav a:hover{color:var(--teal)}
+@media(min-width:820px){.nav{display:flex}}
+.lang-switch{display:flex;background:var(--bg2);border:1px solid var(--line);border-radius:999px;padding:3px;gap:2px;flex-shrink:0}
+.lang-switch button{border:0;background:transparent;color:var(--muted);font:inherit;font-size:13px;font-weight:600;padding:6px 12px;border-radius:999px;cursor:pointer}
+.lang-switch button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+main{padding:36px 0 60px}
+h1{font-size:34px;line-height:1.2;margin-bottom:10px}
+.lede{color:var(--muted);font-size:17px;margin-bottom:28px}
+h2{font-size:24px;margin:36px 0 12px}
+h3{font-size:18px;margin:20px 0 8px}
+p{margin-bottom:12px}
+ul{margin:0 0 12px 20px;padding:0}
+li{margin-bottom:6px}
+.card{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;margin:16px 0}
+.note{background:var(--amber-soft);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;margin:16px 0}
+.verdict{background:var(--teal-soft);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;margin:16px 0}
+table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14.5px}
+th,td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{color:var(--muted);font-size:13px}
+footer{border-top:1px solid var(--line);padding:24px 0;color:var(--muted);font-size:14px}
+</style>
+</head>
+<body data-lang="en">
+<header class="topbar">
+  <div class="wrap topbar-in">
+    <div class="brand"><a href="index.html" style="color:inherit;text-decoration:none"><span class="en">Three Phases</span><span class="zh">宇宙三相</span></a><small>TPCG</small></div>
+    <nav class="nav" aria-label="Sections">
+      <a href="index.html"><span class="en">Home</span><span class="zh">首页</span></a>
+      <a href="progress.html"><span class="en">Progress</span><span class="zh">进展</span></a>
+      <a href="index.html#discuss"><span class="en">Discussion</span><span class="zh">讨论</span></a>
+    </nav>
+    <div class="lang-switch" role="group" aria-label="Language / 语言">
+      <button type="button" data-setlang="en" aria-pressed="true">EN</button>
+      <button type="button" data-setlang="zh" aria-pressed="false">中文</button>
+    </div>
+  </div>
+</header>
+<main class="wrap">
+  <h1 class="serif"><span class="en">TPCG Progress</span><span class="zh">三相进展</span></h1>
+  <p class="lede"><span class="en">A working record of the numerical programme behind the paper — results, verdicts, and what is not yet claimed. The frozen paper itself is unchanged; this page is where new work is reported.</span><span class="zh">这是论文背后数值纲领的工作记录——结果、裁决，以及尚未宣称的东西。冻结的论文本身没有改动；新工作都在这一页汇报。</span></p>
+
+  <div class="card">
+    <h2 style="margin-top:0"><span class="en">What is being tested</span><span class="zh">我们在测什么</span></h2>
+    <p><span class="en">Whether the phase-coherence length ξ<sub>φ</sub> can serve as an order parameter for the gas → liquid → solid sequence of holonomy configurations {W(C)}. The verdict bar remains: three numbers and one action, S[W]. An explicit S[W], the ~10<sup>−40</sup> gravitational dilution, the emergence of SU(3)×SU(2)×U(1), the crystallion condensation mechanism, and the W(C)-to-metric bridge are all still open.</span><span class="zh">检验相干长度 ξ<sub>φ</sub> 能否作为全纯构型 {W(C)} 的气 → 液 → 固序列的序参量。裁决标准不变：三个数，一个作用量 S[W]。显式的 S[W]、约 10<sup>−40</sup> 的引力稀释、SU(3)×SU(2)×U(1) 的涌现、晶子凝聚机制、W(C) 到度规的映射，都仍然是 open 问题。</span></p>
+  </div>
+
+  <h2><span class="en">Loop-gas runs (S[W] v0.1)</span><span class="zh">Loop-gas 轮次（S[W] v0.1）</span></h2>
+  <p><span class="en">Later runs use m = 1.2, t0 = 1.0, σ = 1.0, L = 12, cold start per coupling point. The observable is the wrap (percolation) fraction. The lesson of the whole series is that wrap saturates: it stops discriminating once the window is solid.</span><span class="zh">后期轮次统一用 m = 1.2、t0 = 1.0、σ = 1.0、L = 12，每点冷启动。观测量是 wrap（渗流）分数。整个系列的教训是：wrap 会饱和——窗口一旦进入固相，它就不再能分辨。</span></p>
+  <table>
+    <tr><th><span class="en">Run</span><span class="zh">轮次</span></th><th><span class="en">Result</span><span class="zh">结果</span></th><th><span class="en">Verdict</span><span class="zh">裁决</span></th></tr>
+    <tr><td>Run-03 (2026-10-18)</td><td><span class="en">W1 passed 4/4; W2 found at L = 8, g<sub>c</sub> ≈ 0.2–0.4</span><span class="zh">W1 四项全过；L = 8 上发现 W2，g<sub>c</sub> ≈ 0.2–0.4</span></td><td><span class="en">Discovery, single lattice size</span><span class="zh">发现，单格点尺寸</span></td></tr>
+    <tr><td>Run-04 (L = 12)</td><td><span class="en">Solid-like point moved to g ≈ 0.55; g = 0.40 wrap 0.46</span><span class="zh">固相样点移到 g ≈ 0.55；g = 0.40 处 wrap 0.46</span></td><td><span class="en">Not a clean confirmation</span><span class="zh">不是干净的确认</span></td></tr>
+    <tr><td>Run-05 (L = 12, multi-seed)</td><td><span class="en">g = 0.45–0.65, wrap 0.46–0.87 across seeds</span><span class="zh">g = 0.45–0.65，多种子 wrap 0.46–0.87</span></td><td><span class="en">Wide percolation region; no sharp g<sub>c</sub></span><span class="zh">宽渗流区；无 sharp g<sub>c</sub></span></td></tr>
+    <tr><td>Run-06 (new seeds)</td><td><span class="en">Seed variance did not shrink; Run-05 high plateau not reproduced</span><span class="zh">种子方差未缩小；Run-05 的高平台未复现</span></td><td><span class="en">No sharp g<sub>c</sub></span><span class="zh">无 sharp g<sub>c</sub></span></td></tr>
+    <tr><td>Run-07 (longer statistics)</td><td><span class="en">Variance shrank but the whole window moved up: wrap 0.82–1.00</span><span class="zh">方差缩小，但整个窗口上移：wrap 0.82–1.00</span></td><td><span class="en">Whole window already solid; no g<sub>c</sub></span><span class="zh">全窗已是固相；无 g<sub>c</sub></span></td></tr>
+    <tr><td>Run-08 (hysteresis)</td><td><span class="en">No wrap loop; down-sweep still fully percolating at g = 0.40</span><span class="zh">无 wrap 回滞环；下扫到 g = 0.40 仍全渗流</span></td><td><span class="en">History dependence, not proof of first order</span><span class="zh">历史依赖，不证明一阶</span></td></tr>
+    <tr><td>Run-09 (2026-10-30, low g)</td><td><span class="en">g = 0.05–0.40, 24/24 points. Mean wrap: 0.43, 0.48, 0.90, 0.72, 0.73, 0.91, 0.95, 0.80. From g = 0.15 up, every seed is ≥ 0.62.</span><span class="zh">g = 0.05–0.40，24/24 个点。平均 wrap：0.43、0.48、0.90、0.72、0.73、0.91、0.95、0.80。从 g = 0.15 往上，每个种子都在 0.62 以上。</span></td><td><span class="en">Wrap does not drop cleanly below 0.40; no g<sub>c</sub> quotable. If an edge exists at L = 12, it lies below g = 0.10 and is obscured by low-g seed scatter.</span><span class="zh">wrap 在 0.40 以下没有干净掉落；报不出 g<sub>c</sub>。若 L = 12 真有边，它在 g = 0.10 以下，且被低 g 种子散点盖住。</span></td></tr>
+  </table>
+  <p><span class="en">The only collapses in Run-09 are single-seed, at the bottom of the window (seed 72345: 0.127 at g = 0.05, 0.028 at g = 0.10), while the other seeds stay at 0.44–0.74. One seed collapsing is scatter, not an edge. Pushing the same observable further down would chase scatter, not measure an edge.</span><span class="zh">Run-09 里唯一的塌陷是单个种子、在窗口底部（72345 号种子：g = 0.05 时 0.127，g = 0.10 时 0.028），而另外两个种子在同一点还留在 0.44–0.74。这是散点，不是边。再往下追同一个观测量，就是追散点，不是量边。</span></p>
+
+  <h2><span class="en">Z<sub>N</sub> toy model, milestone 1 (2026-10-30)</span><span class="zh">Z<sub>N</sub> 玩具模型，第一阶段（2026-10-30）</span></h2>
+  <p><span class="en">Four-dimensional Euclidean Z<sub>8</sub> lattice gauge theory, Wilson action, Metropolis updates, on 8<sup>4</sup> and 12<sup>4</sup> lattices. This is a separate sandbox from the loop-gas code, chosen because its phase diagram is known and its observables do not saturate.</span><span class="zh">四维欧氏 Z<sub>8</sub> 格点规范理论，Wilson 作用量，Metropolis 更新，8<sup>4</sup> 和 12<sup>4</sup> 格点。这是 loop-gas 之外的独立沙盒，选它是因为它的相图已知、观测量不饱和。</span></p>
+  <table>
+    <tr><th><span class="en">Regime</span><span class="zh">区间</span></th><th><span class="en">Evidence</span><span class="zh">证据</span></th></tr>
+    <tr><td><span class="en">Confined-like, β ≤ 0.9</span><span class="zh">禁闭型，β ≤ 0.9</span></td><td><span class="en">Clean area law at β = 0.9; string tension σ ≈ 0.73; Polyakov modulus ≈ 0.02</span><span class="zh">β = 0.9 处干净的面积律；弦张力 σ ≈ 0.73；Polyakov 模 ≈ 0.02</span></td></tr>
+    <tr><td><span class="en">Coulomb-like, β ≈ 1.1–2.5</span><span class="zh">类 Coulomb 相，β ≈ 1.1–2.5</span></td><td><span class="en">Creutz ratios small and falling with loop size (β = 1.1: 0.104 → 0.033 → 0.008); Wilson loops decay slowly</span><span class="zh">Creutz 比小且随圈变大而变小（β = 1.1 时 0.104 → 0.033 → 0.008）；Wilson 圈衰减慢</span></td></tr>
+    <tr><td><span class="en">Ordered, β ≥ 3.0</span><span class="zh">有序相，β ≥ 3.0</span></td><td><span class="en">Plaquette ≥ 0.98; Polyakov modulus locked at 0.95–0.99; Creutz ≈ 0</span><span class="zh">Plaquette ≥ 0.98；Polyakov 模锁在 0.95–0.99；Creutz ≈ 0</span></td></tr>
+  </table>
+  <p><span class="en">Transition windows, not critical points (coarse grid, single seed, order not determined): between β = 0.9 and 1.1, and between β = 2.5 and 3.0.</span><span class="zh">转变窗口，不是临界点（网格还粗、单种子、阶未判）：β = 0.9–1.1 之间，以及 β = 2.5–3.0 之间。</span></p>
+
+  <div class="verdict">
+    <h3 style="margin-top:0"><span class="en">ξ<sub>φ</sub> verdict: negative for the Re-W connected correlator</span><span class="zh">ξ<sub>φ</sub> 裁决：对 Re-W 联通关联子是否定的</span></h3>
+    <p><span class="en">G(d) = ⟨w(C)w(C+d)⟩ − ⟨w⟩² (w = cos loop phase) is at the noise floor (~5×10<sup>−4</sup>) by d = 2 in every phase, with an effective length of only 0.3–0.4 lattice spacings. There is no finite → ∞ pattern in this observable. This does not disprove a massless photon: the cos θ correlator measures a θ²-like operator, not the photon field itself, so its fast decay in the Coulomb regime means this is the wrong ξ<sub>φ</sub> observable. The identified next observable is the sin θ plaquette-angle correlator — the field-strength correlator itself, exponential when gapped and power-law in the Coulomb phase.</span><span class="zh">G(d) = ⟨w(C)w(C+d)⟩ − ⟨w⟩²（w 为圈相位的余弦）在所有相里到 d = 2 就掉到噪声底（约 5×10<sup>−4</sup>），有效长度只有 0.3–0.4 个格距。这个观测量里不存在有限 → ∞ 的图样。这并不否定无质量光子：cosθ 关联子量的是 θ² 型算符，不是光子场本身，所以它在 Coulomb 相里衰减快，说明这是错的 ξ<sub>φ</sub> 观测量。已确定的下一个观测量是 sinθ 的 plaquette 角关联子——场强关联子本身，有能隙时指数衰减，Coulomb 相时幂律衰减。</span></p>
+  </div>
+
+  <div class="note">
+    <h3 style="margin-top:0"><span class="en">A choice the toy forces</span><span class="zh">Toy 逼出的选择</span></h3>
+    <p><span class="en">In this toy, the photon-like regime (β ≈ 1.1–2.5) is not gapped, and the gapped, frozen regime (β ≥ 3.0) has no photon-like slow correlator. The frozen paper's solid cannot be both at once here. The next version must choose: define the solid by the Coulomb regime (the Levin–Wen route) and drop the gapped-solid language, or keep the solid gapped and place the photon in a different regime or stage. Neither option is proven by this scan.</span><span class="zh">在这个 toy 里，光子型区间（β ≈ 1.1–2.5）不 gapped，而 gapped 的冻结区间（β ≥ 3.0）又没有光子型慢关联子。冻结论文里的固相在这里不能同时是两者。下一版必须二选一：按 Levin–Wen 路线用 Coulomb 相定义固相、放弃 gapped 固相的说法，或者固相保持 gapped、光子放另一个区间或阶段。这次扫描没有证明其中任何一个。</span></p>
+  </div>
+
+  <h2><span class="en">Not claimed</span><span class="zh">没有宣称的东西</span></h2>
+  <ul>
+    <li><span class="en">No critical coupling g<sub>c</sub> and no literature β<sub>c</sub> for the Z<sub>8</sub> Wilson action are quoted.</span><span class="zh">没有引用临界耦合 g<sub>c</sub>，也没有引用 Z<sub>8</sub> Wilson 作用量的文献 β<sub>c</sub>。</span></li>
+    <li><span class="en">No transition order has been determined; no hysteresis run has been done for the toy.</span><span class="zh">没有判定任何转变的阶；toy 还没有做回滞跑。</span></li>
+    <li><span class="en">The Fredenhagen–Marcu ratio was not computed: pure gauge theory has no matter endpoints, so it is not computable here. Adding a Higgs field would be a new decision, not a silent extension.</span><span class="zh">Fredenhagen–Marcu 比没有算：纯规范理论没有物质端点，在这里算不了。加 Higgs 场将是一个新决定，不是悄悄的扩展。</span></li>
+    <li><span class="en">Literature verification is partial: Creutz–Jacobs–Rebbi (1979) was verified; the Elitzur–Pearson–Shigemitsu paper itself was not retrieved, and is not claimed as verified.</span><span class="zh">文献核实只做到一半：Creutz–Jacobs–Rebbi（1979）核实了；Elitzur–Pearson–Shigemitsu 原文没有取到，不宣称已核实。</span></li>
+  </ul>
+
+  <h2><span class="en">Next steps</span><span class="zh">下一步</span></h2>
+  <ol>
+    <li><span class="en">Add the sin θ plaquette-angle and loop-angle correlators and re-run β = 0.9–2.5 with more measurements, testing exponential versus power-law decay directly.</span><span class="zh">加入 sinθ 的 plaquette 角关联子和圈角关联子，用更多统计重跑 β = 0.9–2.5，直接检验指数衰减还是幂律衰减。</span></li>
+    <li><span class="en">Refine β around (0.9, 1.1) and (2.5, 3.0) with hot and cold starts to determine the transition order.</span><span class="zh">在 (0.9, 1.1) 和 (2.5, 3.0) 附近细化 β，用热启动和冷启动判定转变的阶。</span></li>
+    <li><span class="en">Only after a clean length emerges should any ξ<sub>φ</sub> claim be drafted; only after the order is determined should any β<sub>c</sub> be quoted. The v0.2 complex weights come after that.</span><span class="zh">只有出现干净的长度之后，才起草任何 ξ<sub>φ</sub> 的宣称；只有判定了阶之后，才引用任何 β<sub>c</sub>。v0.2 复权重在那之后。</span></li>
+  </ol>
+
+  <p><span class="en">Paper (frozen V2, open access):</span><span class="zh">论文（冻结 V2，公开获取）：</span> <a href="https://zenodo.org/records/23787199">Zenodo record 23787199</a></p>
+  <p><span class="en">Questions or discussion:</span><span class="zh">问题或讨论：</span> <a href="index.html#discuss">Discussion</a> <span class="en">or email</span><span class="zh">，或邮件</span> <a href="mailto:yan415822@gmail.com">yan415822@gmail.com</a></p>
+  <p style="color:var(--muted);font-size:14px"><span class="en">Last updated 2026-10-30. This page reports programme progress; it is not a referee report and not established physics.</span><span class="zh">最近更新 2026-10-30。本页汇报的是纲领进展，不是审稿报告，也不是已确立的物理。</span></p>
+</main>
+<footer><div class="wrap"><p><span class="en">Three-Phase Cosmology of Gauge/Gravity (TPCG) · Winston Y Yan</span><span class="zh">规范/引力的三相宇宙学（TPCG）· Winston Y Yan</span></p></div></footer>
+<script>
+(function(){
+  var body=document.body;
+  document.querySelectorAll('[data-setlang]').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      body.setAttribute('data-lang',btn.getAttribute('data-setlang'));
+      document.documentElement.lang = btn.getAttribute('data-setlang')==='zh' ? 'zh-CN' : 'en';
+      document.querySelectorAll('[data-setlang]').forEach(function(b){b.setAttribute('aria-pressed', b===btn ? 'true':'false');});
+    });
+  });
+})();
+</script>
+</body>
+</html>
